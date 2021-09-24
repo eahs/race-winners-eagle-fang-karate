@@ -29,18 +29,18 @@ namespace RaceWinners
                 array.Add(a);
             }
 
-            var min_students = array.Min();
+            var max_students = array.Min(); // Max students that every class has in common
 
             for (int i = 0; i < data.Count; i++)
             {
                 var score = 0;
 
-                for (int x = 0; x < min_students; x++) // Going through each score to add
+                for (int x = 0; x < max_students; x++) // Going through each score to add
                 {
                     score += data[i].Ranks[x];
                 }
 
-                score = score / min_students;
+                score = score / max_students;
 
                 final_scores.Add(score);
             }
